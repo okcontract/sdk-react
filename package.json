@@ -1,0 +1,71 @@
+{
+  "name": "@okcontract/sdk-react",
+  "private": false,
+  "license": "Apache-2.0",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "One-stop-shop permissionless SDK for building any blockchain frontend",
+  "keywords": [
+    "ethereum",
+    "evm",
+    "blockchain",
+    "frontend",
+    "SDK",
+    "React",
+    "permissionless",
+    "web3"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okcontract/sdk-react.git"
+  },
+  "author": "Henri Binsztok",
+  "module": "dist/sdk-react.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/sdk-react.es.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "definitions": "tsc --project tsconfig.build.json",
+    "prepublishOnly": "npm run build && cp def/* dist/",
+    "formatReadme": "prettier README.md --prose-wrap always --print-width 78 -w"
+  },
+  "dependencies": {
+    "@okcontract/cells": "^0.3.1",
+    "@okcontract/sdk": "^0.1.0",
+    "@okcontract/multichain": "^0.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vite-plugin-top-level-await": "^1.4.1",
+    "vite-plugin-wasm": "^3.3.0",
+    "svelte": "^4.2.15",
+    "svelte-preprocess": "^5.1.4"
+  }
+}
