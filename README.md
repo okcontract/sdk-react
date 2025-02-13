@@ -77,7 +77,7 @@ const interactionID = "AbX2IbtBDbgJdkAXucGu";
 
 ### Demo
 
-See the [demo app](https://github.com/okcontract/sdk-demo) to learn how to get
+See the [demo app](https://github.com/okcontract/compound-demo) to learn how to get
 started with basic features:
 
 - Wallet connection
